@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GimmeSpace Home</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <script type="module" src="./index.js"></script>
+    <style>
+        mark {
+            background-color: rgb(171, 160, 160);
+        }
+        body {
+            background-image: url("CoffeShopImages/coffee_background_1.jpeg");
+        }
+        a {
+            color: white;
+        }
+        .button {
+          border: none;
+          color: white;
+          padding: 16px 32px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+          margin: 4px 2px;
+          transition-duration: 0.4s;
+          cursor: pointer;
+          border-radius: 12px;
+        }
+        
+        .button1 {
+          background-color: white; 
+          color: black; 
+          border: 2px solid #4CAF50;
+        }
+        
+        .button1:hover {
+          background-color: #b4edb6;
+          color: black;
+        }
+        
+        .button2 {
+          background-color: transparent; 
+          color: white; 
+          border: 2px solid #045a76;
+        }
+        
+        .button2:hover {
+          background-color: #def7ff;
+          color: black;
+        }
+        .collapsible {
+            background-color: transparent;
+            color: white;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: 1px;
+            text-align: center;
+            outline: none;
+            font-size: 15px;
+        }
+        .headerBar {
+            background-color: transparent;
+            color: rgb(14, 14, 70);
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            height: 200px;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 150px;
+            font-family: "Fantasy", papyrus;
+        }
+        .menuBar {
+            background-color: transparent;
+            color: white;
+            cursor: pointer;
+            padding: 18px;
+            width: 40%;
+            height: 50px;
+            border: none;
+            text-align: right;
+            outline: none;
+        }
+        .active, .collapsible:hover {
+            background-color: #555;
+        }
+        .content {
+            padding: 0 18px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+            background-color: #5a5757;
+        }
+        h1 {text-align: left; font-family: "Fantasy", papyrus;}
+    </style>
+</head>
+<body style="color:rgb(227, 224, 224);">
+    <button class="menuBar">
+        <h1 style="color:white">Finding the perfect cafe<br> is just a few clicks away...<br> .</h1>
+        <button onclick="survCM()" class="button button2"><a href="survey.html" target="_blank" >Begin Survey</a></button>
+        <button onclick="adhdLink()" class="button button2">Learn More About ADHD</button>
+        <button onclick="dyslexiaLink()" class="button button2">Learn More About Dyslexia</button>
+        <button onclick="benefitLink()" class="button button2">Learn the Benefits</button>
+    </button>
+    <button class="headerBar">
+        <img src="CoffeShopImages/GimmeSpace_Logo.png" alt="Logo Design" height="300px" width="300px">
+        GimmeSpace
+    </button>
+    <p>.</p>
+    <img src="CoffeShopImages/cof_shop_banner2.png" alt="Drawings of Coffee Shops" width="100%">
+    <button class="collapsible">How We Help</button>
+    <div class="content">
+        <p> Whether you are diagnosed with a learning disorder, or are simply looking for a 
+            better cafe to complete your work, GimmeSpace allows you to find a study space that
+            fits all of your needs, and provide the most comfortable setting to help achieve the
+            most productive version of yourself. 
+        </p>
+    </div>
+    <button class="collapsible">Our Initiative</button>
+    <div class="content">
+        <p> Our study habits are influenced by our surroundings and the environment
+            in which we work in. Still dont believe it? Notice modern companies. 
+            With work from home inituatives, open concept offices, allowing more sunlight, 
+            and offering even more benefits, companies large and small alike are noticing
+            the increased productivity of their workers due to better working conditions.
+            For this reason, we believe that everyone deserves a healthy working environment,
+            to achieve the best version of themselves.   
+        </p>
+    </div>
+    <button class="collapsible">Our Approach</button>
+    <div class="content">
+        <p> To cater to everyone- whether you have a disability or not- we take into account\
+            noise level, crowds, and other factors that can significantly impact your productivity
+            and comfort levels. In the future, we hope to add many more personalizable settings to
+            help cater to your unique and personalized needs.  
+        </p>
+    </div>
+    <script>
+        function lmfunction() {
+            const lmMessage = "If you want to learn more about our efforts, our website should be expanding soon using up-to-date scientific research.";
+            document.getElementById("demo").innerHTML = lmMessage;
+        }
+        function clearLM(){
+            document.getElementById("demo").innerHTML = "";
+        }
+        function survCM() {
+            const lmMessage = "Click me to to find that perfect coffee shop!";
+            document.getElementById("demo").innerHTML = lmMessage;
+        }  
+
+        function adhdLink(){
+            // Create anchor element.
+            var a = document.createElement('a'); 
+                  
+                  // Create the text node for anchor element.
+                  var link1 = document.createTextNode("Learn more about ADHD");
+                
+                  // Set the href property.
+                  a.target = '_blank';
+                  a.href = "https://www.cdc.gov/ncbddd/adhd/facts.html"; 
+                  a.src = "CoffeShopImages/adhd_web.jpg"
+    
+                  // Append the anchor element to the body.
+                  document.body.appendChild(a);
+                  a.click();
+        }
+        function dyslexiaLink(){
+            // Create anchor element.
+            var a = document.createElement('a'); 
+                  
+                  // Create the text node for anchor element.
+                  var link1 = document.createTextNode("\nLearn more about dyslexia"); 
+                    
+                  // Set the href property.
+                  a.target = '_blank';
+                  a.href = "https://dyslexiaida.org/dyslexia-basics/"; 
+    
+                  // Append the anchor element to the body.
+                  document.body.appendChild(a);
+                  a.click();
+        
+        }
+        function benefitLink(){
+            // Create anchor element.
+            var a = document.createElement('a'); 
+                  
+                  // Create the text node for anchor element.
+                  var link1 = document.createTextNode("\nLearn Benefits"); 
+                    
+                  // Set the href property.
+                  a.target = '_blank';
+                  a.href = "https://csu-cauldron.com/2022/04/08/the-benefits-of-studying-in-a-coffee-shop/"; 
+    
+                  // Append the anchor element to the body.
+                  document.body.appendChild(a);
+                  a.click();
+        
+        }
+    </script>
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+        
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight){
+              content.style.maxHeight = null;
+            } else {
+              content.style.maxHeight = content.scrollHeight + "px";
+            } 
+          });
+        }
+        </script>
+    <!--The div element for the map -->
+    <div id="map"></div>
+
+    <!-- 
+      The `defer` attribute causes the callback to execute after the full HTML
+      document has been parsed. For non-blocking uses, avoiding race conditions,
+      and consistent behavior across browsers, consider loading using Promises
+      with https://www.npmjs.com/package/@googlemaps/js-api-loader.
+      -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"
+      defer
+    ></script>
+</body>
+</html>
